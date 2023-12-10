@@ -5,7 +5,6 @@ import openai
 main = Blueprint('main', __name__)
 
 @main.route('/generaterecipe', methods=['POST'])
-@cross_origin(origin='http://192.168.0.100', supports_credentials=True)
 def gpt3():
     data = request.get_json()
     input_text = data['input_text']
